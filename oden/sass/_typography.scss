@@ -1,0 +1,73 @@
+%heading {
+    font-weight: 700;
+    color: var(--color-dark);
+    font-family: var(--primary-font);  
+    cursor: pointer;  
+}
+
+
+.heading  {
+    
+    &__primary {
+        font-size: 4rem;   
+        flex: 1 0 30%; 
+        @extend %heading;   
+        text-transform: uppercase;  
+
+        @media only screen and (max-width: $bp-medium) {
+            text-align: center;     
+    }
+
+    }
+
+    &__secondary {
+        font-size: 3rem; 
+        @extend %heading; 
+        text-align: center; 
+        margin-top: 4rem auto;  
+        line-height: 1.5; 
+        letter-spacing: .28rem; 
+
+  
+    
+    }
+
+
+}
+
+// extend paragraph 
+
+%paragraph {
+    font-family: var(--primary-font);
+    font-size: 2rem;  
+}
+
+.paragraph {
+
+
+    &__intro {
+        color: rgba(0,0,0, .5);  
+        width: 50%; 
+        text-align: center;
+        margin: .5rem auto;
+        width: 58%; 
+        @extend %paragraph; 
+        
+        @media only screen and (max-width: $bp-medium) {
+            width: 100%; 
+        }
+
+    }
+
+    &__footer {
+        @extend %paragraph; 
+        text-align: center; 
+        color: white;  
+        -webkit-background-clip: unset;
+        -webkit-text-fill-color: white;     
+
+    }
+
+
+}
+

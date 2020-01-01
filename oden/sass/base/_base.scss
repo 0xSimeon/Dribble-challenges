@@ -1,0 +1,95 @@
+//CSS Variables declarations:
+
+:root {
+
+    // FONTS 
+	--primary-font: "Open Sans", sans-serif;
+    --secondary-font: "Montserrat", sans-serif;
+    
+    // COLORS 
+	--color-primary: #ffd200;
+	--color-secondary: #f7971e;
+    --color-dark: #1d2059;
+
+}
+// BREAK POINTS for MEIDA QUERIES
+
+$bp-large: 62.5em; // 1000px / 16px
+$bp-medium: 43.75em; // 700px / 16px 
+$bp-small: 25em; //400px / 16px   
+
+*,
+*::before,
+*::after {
+	@include reset;   
+}
+
+html {
+    font-size: 62.5%; //(100 / 16px) * 10  (1rem == 10px ) now;
+    box-sizing: border-box; 
+
+    @media only screen and (max-width: $bp-medium) {
+        font-size: 50%;   //(100 / 16px) * 8  (1rem == 8px ) now;  
+    }
+}
+
+body {
+    font-family: var(--primary-font); 
+      background:  linear-gradient(to left, #fc466b, #3f5efb);
+
+      @media only screen and (max-width: $bp-medium) {
+        background: none;    
+    }
+
+
+     line-height: 1.6; 
+    
+}
+
+.container {
+    max-width: 120rem;   
+    width: 70%;    
+    margin: 4rem auto;   
+    background-color: #fff;                 
+    min-height: 50rem;          
+    box-shadow: 0 1.5rem 2rem rgba(0,0,0, .5); 
+    border-radius: 1.5rem;  
+    padding: 1rem;   
+    
+    @media only screen and (max-width: $bp-large) {
+        width: 100%; 
+        padding: 0; 
+        box-shadow: none;
+        border-radius: 0;     
+        margin: 0;
+         
+    }
+}
+
+::selection {
+    background:#3f5efb;      
+    color: #fff; 
+}
+
+br {
+    @media only screen and (max-width: $bp-small) {
+        display: none;    
+    }
+}
+
+  
+    // UTILITIES  - Margins 
+
+    .mb-small{margin-bottom: 1rem; } 
+    .mb-medium{margin-bottom: 2rem; } 
+    .mb-large{margin-bottom: 4rem; } 
+
+    .mr-small{margin-right: 1rem; } 
+    .margin{margin: 1rem;}         
+    
+
+
+
+
+
+
